@@ -112,7 +112,7 @@ class R3000 {
         void run_instr_regimm();
 
         virtual uint32_t get_physical_address(uint32_t address);
-        
+
         virtual uint32_t read(uint32_t address, MemoryWidth width);
         virtual void write(uint32_t address, uint32_t data, MemoryWidth width);
 
@@ -178,7 +178,7 @@ class R3000 {
 
     public:
         R3000(Bus& bus);
-        ~R3000 = default;
+        ~R3000() = default;
         
         void print_state();
 
